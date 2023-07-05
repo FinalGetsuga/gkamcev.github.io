@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul id="nav_ul">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="container">
+    <div id="home">
+        <div class="home">
+            <h1>Gjorgji Kamchev</h1>
+            
+            <h2>Student at FCSE</h2>
+        </div>  
+    </div>
+    <div id="about">
+        <div class="about">
+            <div id="about-text">
+                <input id="ch" type="checkbox">
+                <h2>About me</h2>
+                <br>
+                <br>
+                <p>Hello, I'm Gjorgji Kamchev, 20 years old individual, student from the town of Kavadarci, North Macedonia. I'm a student at the Faculty of Computer Science and Engineering in Skopje, North Macedonia...</p>
+                <div class="show-more">
+                <p>I describe myself as a young enthusiastic, self-motivated, reliable, responsible and hard working person who wants to expand his knowledge, gain knowledge from many areas and later use that knowledge in his
+                future proffesion. My education started in the town of Kavadarci where I studied middle and high school. During my high education I gained a lot of experience in the field of
+                electrical engineering, digital systems, telecommunication systems and automatization.When I finished high school I was immediately offered a work position as a electrical installer for a company in Kavadarci, 
+                but I respectively refused because I knew within myself that I could push even further and reach whole new great levels.That's when I decided to enroll myself in the Faculty of Computer Science and Engineering in Skopje
+                and expand my knowledge in the fields of Computer Science.</p>
+                
+                <label id="left" for="ch">Show less</label>
+                </div>
+
+                <label id="left" for="ch">Read more</label>
+            </div>
+            <div id="about-body">
+                <div id="slider">
+                    <div id="slides">
+
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                
+                        <div class="slide first">
+                        <img src="img/img1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                        <img src="img/img2.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                        <img src="img/img4.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                        <img src="img/img5.jpg" alt="">
+                        </div>
+
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+            
+                </div>
+
+                <script type="text/javascript">
+                    var counter = 1;
+                    setInterval(function() {
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++;
+                        if(counter > 4){
+                            counter = 1;
+                        }
+                    }, 4000);
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <div id="education">
+            <div>
+            <h2>Education</h2>
+            </div>
+        <div id="edu-cnt">
+            <div id="tht" >
+            <a href="https://todehtefov.edu.mk/" target="_blank"><img src="img/txt2.jpg" alt=""></a>
+                <div class="bottom-left">
+                <h3>ООУ ,,Тоде Хаџи-Тефов"</h3>
+                <h4>Elementery school</h4>
+                </div>
+            </div>
+            <div id="ksb">
+            <a href="https://souksb.mk/" target="_blank"><img src="img/ksb2.jpg" alt=""></a>
+                <div class="bottom-left">
+                <h3>СОУ ,,Киро Спанџов Брко"</h3>
+                <h4>High School</h4>
+                </div>
+            </div>
+            <div id="finki">
+            <a href="https://www.finki.ukim.mk/mk" target="_blank"><img src="img/finki.jpg" alt=""></a>
+                <div class="bottom-left">
+                <h3>Faculty of Computer Science & Engineering</h3>
+                <h4>Faculty</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="skills">
+        <h2>Skills</h2>
+        <div id="skills-cnt">
+            <div>
+                <img src="img/csharp.png" alt="">
+                C#
+            </div>
+            <div>
+                <img src="img/c++.png" alt="">
+                C++
+            </div>
+            <div>
+                <img src="img/html.svg" alt="">
+                HTML
+            </div>
+            <div>
+                <img src="img/css.png" alt="">
+                CSS
+            </div>
+            <div>
+                <img src="img/js.png" alt="">
+                JavaScript
+            </div>
+            <div>
+                <img src="img/java.png" alt="">
+                Java
+            </div>
+            <div>
+                <img src="img/Python.png" alt="">
+                Python
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <form onsubmit="sendEmail(); reset(); return false">
+        <h1>Contact Us</h1>
+        <input type="text" id="fname" placeholder="First Name" required>
+        <input type="text" id="lname" placeholder="Last Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="mobile" placeholder="Mobile" required>
+        <h4>Leave a message</h4>
+        <textarea id="message" placeholder="Write a message..." required></textarea>
+        <input type="submit" value="Send" id="button">
+    </form>
+</div>
+<div id="other">
+    <h2>Other contact forms</h2>
+        <div id="icons">
+        <a href="https://www.facebook.com/profile.php?id=100014416175409" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/medusaxy" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/gjoksi_/" class="fa fa-instagram"></a>
+        <a href="https://github.com/FinalGetsuga" class="fa fa-github"></a>
+        </div>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail() {
+        Email.send({
+            SecureToken : "67f97b6f-fec2-4196-81e0-f1cdc34cf024",
+            To : 'vzabata101@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact",
+            Body : "First Name: " + document.getElementById("fname").value
+            + "<br> Last Name: " + document.getElementById("lname").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Mobile: " + document.getElementById("mobile").value
+            + "<br> Message: " + document.getElementById("message").value
+    }).then(
+    message => alert("Message Sent")
+        );
+    }
+</script>
+</body>
+</html>
